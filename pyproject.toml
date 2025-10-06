@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabplexer"
+version = "0.1.0"
+description = "A lightweight tab wrapper for Alacritty"
+authors = [{name = "Tabplexer Developers"}]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+]
+dependencies = []
+
+[project.scripts]
+tabplexer = "tabplexer.__main__:main"
