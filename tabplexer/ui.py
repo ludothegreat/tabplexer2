@@ -1,10 +1,9 @@
 """Curses based user interface for Tabplexer."""
-from __future__ import annotations
 
 import curses
 import textwrap
 from typing import Optional
-
+from __future__ import annotations
 from .manager import TabManager, Tab, AlacrittyNotFoundError
 
 
