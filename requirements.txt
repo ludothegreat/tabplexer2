@@ -1,0 +1,3 @@
+# Tabplexer currently relies only on the Python standard library.
+# This requirements file is provided for pip-based workflows and intentionally
+# lists no third-party dependencies.
