@@ -32,11 +32,32 @@ This will install a `tabplexer` entry point in your environment.
 
 ## Usage
 
-After installation run:
+## Quick start
 
-```bash
-tabplexer
-```
+1. Install the package into the same environment that contains
+   [Alacritty](https://github.com/alacritty/alacritty):
+
+   ```bash
+   pip install .
+   ```
+
+   You can use `pip install -e .` during development to get live edits.
+
+2. Launch the dashboard:
+
+   ```bash
+   tabplexer
+   ```
+
+   You can also run `python -m tabplexer` if you prefer not to install the
+   console script.
+
+When Tabplexer starts it immediately shows the dashboard. Press <kbd>n</kbd>
+to open a fresh Alacritty window. You will be prompted (at the bottom of the
+screen) for an optional title and command. Leave both prompts blank to launch
+Alacritty with your default login shell. Supplying a command will execute it
+through your shell (`$SHELL -lc <command>`), so you can start tools like
+`htop` or `ssh user@host` directly.
 
 Controls inside the curses UI:
 
@@ -51,6 +72,10 @@ Controls inside the curses UI:
 | <kbd>x</kbd>      | Remove exited tabs from the list                             |
 | <kbd>?</kbd> or <kbd>h</kbd> | Show built-in help screen                                 |
 | <kbd>q</kbd> or <kbd>Esc</kbd> | Quit Tabplexer                                        |
+
+If your system has `wmctrl` available, pressing <kbd>Enter</kbd> will hint to
+your window manager to focus the selected window; otherwise the key shows a
+message explaining that focus is unavailable.
 
 Quitting Tabplexer leaves existing Alacritty windows running so they remain
 available in your desktop environment.
